@@ -1,0 +1,15 @@
+- for the most frequent adjectives, get their most frequent prepositions
+
+- get distributions:
+-x fix error in frequency counter: adjectives are cut off at size()-1 or -2... looks ok...(?) check!
+-x include linesplit on # and %aux etc. for lemmas to reconstruct lemmas with separable particles
+-x also consider OBJP (obligatory PPs which so far may have been missed for verbs - OBJP not for adjectives)
+-x distinguish VADJ as ADV-head from all other head roles: ADJ has deprel label ADV
+-x handle multi-word prepositions: dependent of preposition also has PP deprel label
+<- multiheadedness vs. multidependence
+-x process conjunction expressions:
+startsWith("KO") PoS-tag for conjunctions AND "," (PUNCT);
+head of conjunction is ADJ
+-- reattach topicalized PP in Vorfeld to main verb
+
+- check whether PP overlap is working, returns no prepositions for e.g. "überzüchtet" although it has "mit" as

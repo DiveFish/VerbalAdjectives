@@ -1,0 +1,70 @@
+suggestions:
+- Some adjectives that have a verbal and a deverbal reading are not analyzed as verb-derived. For instance, ‘bekannt’ is marked as ‘false’, however it is also the past participle of bekennen and as such can also act as a verbal adjective. Such cases should be marked as verb-derived.
+- Adjectives that have typical adjective prefixes (e.g. ‘un-‘, ‘ent-‘), suffixes (e.g. ‘-bar’, ‘-lich’, ‘-ig’), and/or Ablaut and contain a verb root should be marked as verb-derived. E.g. (1) ‘unabhängig’ should be verb-derived with lemma ‘abhangen’ and (2) ‘verantwordlich’ should be verb-derived with lemma ‘verantworden’.
+- In compounds, the head of the compound determines whether the adjective is verbal or not. As a heuristic, you can assume that the rightmost constituent of the compound is virtually always the head. E.g. ‘erziehungswissenschaftliche’ is not verb-derived, because the head is ‘wissenschaftliche’.
+- Similarly, in the lemmatization, thus the head always provides the lemma. So, e.g. in anwendungsorientiert, the lemma is ‘orientieren’ (not ‘anwenden’), in ’spaziergehende’ -> ‘gehen'.
+
+- mark participles as verb-derived
+- mark adjectival affix/ Umlaut + verb root as verb-derived
+- if right-most constituent in compound is verb-derived, mark adjective as verb-derived
+- right-most constituent serves as baseverb
+
+
+-bar verbindet sich nur mit Verben: ess-bar, trink-bar, hör-bar, denk-bar. Das Ergebnis ist ein Adjektiv
+-> endsWith("bar") = is verb derived
+
+Endungen: -bar, -ig, -isch, -lich, -los, -sam, -voll
+
+siehe http://www.canoo.net/services/WordformationRules/Derivation/To-A/N-To-A/Suffig.html
+
+Präfixe, die vor Adjektiven stehen KÖNNEN:
+ab 	aller 	außer 	binnen
+erz 	ge 	grund 	inner
+miss 	nach 	ober 	über
+un 	unter 	ur 	vor
+wider 	zwischen
+
+a 	anti 	bi 	de
+dis 	en 	ex 	extra
+hyper 	in 	inter 	intra
+kon 	konter 	multi 	non
+post 	prä 	pro 	pseudo
+retro 	semi 	sub 	super
+supra 	trans 	ultra 	zirkum
+
+
+Suffixe:
+ig 	isch 	istisch 	lich
+sam
+erlei 	fach
+
+en 	erig 	ern 	haft
+ig 	isch 	lich 	los
+mäßig 	sam 	sch
+
+erig 	ern 	ig 	isch
+lich
+
+haft 	los 	mäßig
+
+erig 	ig 	isch 	lich
+
+al 	alisch 	anisch 	ar
+är 	arisch 	atisch 	ell
+esk 	etisch 	ial 	id
+iell 	in 	inisch 	istisch
+itisch 	iv 	ös 	orisch
+ual 	uell
+
+bar 	erig 	haft 	ig
+isch 	lich 	sam
+
+erig 	ig 	isch 	lich
+
+bar 	ig 	lich 	sam
+
+abel 	ant 	at 	ativ
+ent 	ibel 	il 	it
+itiv 	iv
+
+? fähig

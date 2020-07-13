@@ -1,0 +1,33 @@
+rot mit grünen Punkten und ohne jeden Schnickschnack
+
+ADJ PP1 KONJ PP2
+
+token: PP1
+PoS of head(PP1) is ADJ
+
+token: PP2
+is head KONJ?
+-> yes:
+is head of KONJ an ADJ?
+-> add preposition to list
+is head of KONJ a KONJ?
+--> yes:
+s.a.
+
+
+token: any PP
+
+boolean headFound = false;
+head = PP;
+while(!headFound) {
+    if(head an ADJ) {
+        add PP to list
+        headFound = true;
+    }
+    else if(head is KONJ or ",")
+        head = head(head);
+        continue;
+    else
+        headFound = false;
+    }
+}
