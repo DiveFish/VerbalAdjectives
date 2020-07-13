@@ -1,6 +1,6 @@
 ## Processing procedure
 - Get list of tokens under consideration, here adjectives (by lemma or token)
-- Run smor analysis on them (cf. usefulCommans.txt for run command)
+- Run smor analysis on them
 - Update dictionary of (non-)verb-derived adjectives by going over the smor analysis (SmorAnalyzer.java)
 - For verb-derived adjectives, get base verbs
 - Get frequency distributions
